@@ -18,7 +18,7 @@ function Header() {
       <div className={styles.headerImage}>
         <img src={mealsImage} alt="Italian cuisine" />
       </div>
-      <Summary></Summary>
+      <Summary />
     </React.Fragment>
   );
 }
