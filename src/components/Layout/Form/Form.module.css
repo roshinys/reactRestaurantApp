@@ -1,0 +1,48 @@
+.div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3px;
+}
+
+.formInput {
+  display: flex;
+  justify-content: space-around;
+  padding: 2px;
+  font-weight: 600;
+}
+
+.input::-webkit-inner-spin-button,
+.input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input {
+  width: 40px;
+  border-radius: 3px;
+  margin: 0 10px;
+}
+
+.formButton {
+  border-radius: 10px;
+  width: 70%;
+  margin: 5px;
+  padding: 5px;
+  font-size: small;
+  font-weight: 700;
+  background-color: black;
+  color: white;
+}
+
+.formButton:hover {
+  background-color: #03c988;
+  color: black;
+}

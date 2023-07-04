@@ -6,21 +6,19 @@ const DUMMY_MEALS = [
   {
     id: 1,
     title: "Spaghetti Bolognese",
-    description: "Classic Italian pasta dish with tomato sauce and ground beef",
+    description: "Classic Italian pasta",
     price: 9.99,
   },
   {
     id: 2,
     title: "Chicken Caesar Salad",
-    description:
-      "Fresh romaine lettuce, grilled chicken, croutons, and Caesar dressing",
+    description: "Fresh romaine lettuce",
     price: 12.99,
   },
   {
     id: 3,
     title: "Mushroom Risotto",
-    description:
-      "Creamy Arborio rice cooked with mushrooms and Parmesan cheese",
+    description: "Creamy Arborio rice ",
     price: 10.99,
   },
 ];
@@ -33,6 +31,7 @@ function Meals() {
           return (
             <MealItem
               key={meal.id}
+              mealId={meal.id}
               title={meal.title}
               description={meal.description}
               price={meal.price}

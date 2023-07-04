@@ -1,4 +1,6 @@
 .mealItem {
+  display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid black;
   padding: 2px;
   margin: 10px 0;
