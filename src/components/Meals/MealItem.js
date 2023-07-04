@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./MealItem.module.css";
-import Form from "../Layout/Form/Form";
+import Form from "../UI/Form/Form";
 
 function MealItem(props) {
   return (
