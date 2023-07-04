@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Cart.module.css";
 import Modal from "../UI/Modal/Modal";
+import CartContext from "../../store/cart-context";
 
 const DUMMY_CART = [
   {
@@ -18,6 +19,12 @@ const DUMMY_CART = [
 ];
 
 function Cart() {
+  const ctx = useContext(CartContext);
+
+  const cartCloseHandler = () => {
+    ctx.closeCart();
+  };
+
   const cartItems = (
     <ul>
       {DUMMY_CART.map((cart) => {
@@ -34,7 +41,9 @@ function Cart() {
         <span>35.62</span>
       </div>
       <div className={styles.actions}>
-        <button className={styles.closeCart}>Close</button>
+        <button className={styles.closeCart} onClick={cartCloseHandler}>
+          Close
+        </button>
         <button className={styles.orderCart}>Order</button>
       </div>
     </Modal>
