@@ -28,15 +28,7 @@ function Meals() {
     <div className={styles.allmeals}>
       <div className={styles.meals}>
         {DUMMY_MEALS.map((meal) => {
-          return (
-            <MealItem
-              key={meal.id}
-              mealId={meal.id}
-              title={meal.title}
-              description={meal.description}
-              price={meal.price}
-            />
-          );
+          return <MealItem key={meal.id} mealItem={meal} />;
         })}
       </div>
     </div>

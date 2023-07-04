@@ -3,21 +3,6 @@ import styles from "./Cart.module.css";
 import Modal from "../UI/Modal/Modal";
 import CartContext from "../../store/cart-context";
 
-const DUMMY_CART = [
-  {
-    id: 1,
-    title: "Spaghetti Bolognese",
-    price: 9.99,
-    quantity: 2,
-  },
-  {
-    id: 2,
-    title: "Chicken Caesar Salad",
-    price: 12.99,
-    quantity: 1,
-  },
-];
-
 function Cart() {
   const ctx = useContext(CartContext);
 
@@ -27,8 +12,12 @@ function Cart() {
 
   const cartItems = (
     <ul>
-      {DUMMY_CART.map((cart) => {
-        return <li key={cart.id}>{cart.title}</li>;
+      {ctx.cartItems.map((cart) => {
+        return (
+          <li key={cart.id}>
+            {cart.title} <span>{cart.quantity}</span>
+          </li>
+        );
       })}
     </ul>
   );

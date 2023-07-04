@@ -6,11 +6,11 @@ function MealItem(props) {
   return (
     <div className={styles.mealItem}>
       <div>
-        <h1>{props.title}</h1>
-        <p>{props.description}</p>
-        <span>{props.price}</span>
+        <h1>{props.mealItem.title}</h1>
+        <p>{props.mealItem.description}</p>
+        <span>{props.mealItem.price}</span>
       </div>
-      <Form mealId={props.mealId} />
+      <Form mealId={props.mealId} mealItem={props.mealItem} />
     </div>
   );
 }
