@@ -22,6 +22,7 @@ const CartContext = React.createContext({
   cartItems: DUMMY_CART,
   addCartItem: (amount, cartItem) => {},
   removeCartItem: (id) => {},
+  changeQuantity: (quantity, cartItem) => {},
 });
 
 export const CartContextProvider = (props) => {
@@ -36,6 +37,7 @@ export const CartContextProvider = (props) => {
   };
 
   const addCartItemHandler = (amount, cartItem) => {
+    console.log(amount);
     setCartItems((prevState) => {
       const oldCart = [...prevState];
       const existingCart = oldCart.find((cart) => cart.id === cartItem.id);
@@ -51,13 +53,35 @@ export const CartContextProvider = (props) => {
         id: cartItem.id,
         title: cartItem.title,
         price: cartItem.price,
-        quantity: amount,
+        quantity: parseInt(amount),
       };
       return [...oldCart, newCart];
     });
   };
 
-  const removeCartItemHandler = (cartItem) => {};
+  const changeQuantityHandler = (newquantity, id) => {
+    setCartItems((prevState) => {
+      const oldCart = [...prevState];
+      return oldCart.map((cart) => {
+        if (cart.id === id) {
+          return {
+            ...cart,
+            quantity: parseInt(newquantity),
+          };
+        }
+        return cart;
+      });
+    });
+  };
+
+  const removeCartItemHandler = (id) => {
+    setCartItems((prevState) => {
+      const updatedCartItems = [...prevState];
+      return updatedCartItems.filter((cart) => {
+        return cart.id !== id;
+      });
+    });
+  };
 
   return (
     <CartContext.Provider
@@ -68,6 +92,7 @@ export const CartContextProvider = (props) => {
         cartItems: cartItems,
         addCartItem: addCartItemHandler,
         removeCartItem: removeCartItemHandler,
+        changeQuantity: changeQuantityHandler,
       }}
     >
       {props.children}

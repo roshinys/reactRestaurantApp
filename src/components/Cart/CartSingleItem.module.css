@@ -1,0 +1,24 @@
+.listcart {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.cartactions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  padding: 5px;
+}
+
+.cartactions button {
+  background-color: #03c988;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
