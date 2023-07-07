@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       {ctx.isCart && <Cart />}
-      <Header></Header>
+      <Header cartLength={ctx.cartItems.length}></Header>
       <Meals />
     </>
   );

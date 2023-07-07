@@ -1,16 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import styles from "./Button.module.css";
-import CartContext from "../../../store/cart-context";
 
 function Button(props) {
-  const ctx = useContext(CartContext);
-
-  const buttonClickHandlder = () => {
-    ctx.openCart();
-  };
-
+  console.log(props);
   return (
-    <button className={styles.button} onClick={buttonClickHandlder}>
+    <button type={props.type} className={styles.button} onClick={props.onClick}>
       {props.children}
     </button>
   );

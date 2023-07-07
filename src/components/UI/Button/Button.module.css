@@ -2,16 +2,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 45px;
-  padding: 10px;
+  border: none;
   border-radius: 10px;
-  width: 200px;
-  height: 45px;
-  background-color: white;
-  color: black;
+  width: max-content;
+  margin: 3px 15px;
+  padding: 7px 15px;
+  font-size: small;
+  font-weight: 700;
+  background-color: #03c988;
+  color: white;
 }
 
 .button:hover {
+  background-color: white;
+  color: #03c988;
+}
+
+.cartButton {
   background-color: #03c988;
-  color: black;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

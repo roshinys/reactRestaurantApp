@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import styles from "./CartSingleItem.module.css";
 import CartContext from "../../../store/cart-context";
+import Button from "../../UI/Button/Button";
 
 function CartSingleItem(props) {
   const [quantity, setQuantity] = useState(props.cart.quantity);
@@ -15,7 +16,6 @@ function CartSingleItem(props) {
 
   const removeQuantityHandler = () => {
     if (quantity <= 1) {
-      alert("Do you want delete the item?");
       cartCtx.removeCartItem(props.cart.id);
       return;
     }
@@ -33,9 +33,13 @@ function CartSingleItem(props) {
           <p>${props.cart.price}</p>
         </div>
         <div className={styles.cartactions}>
-          <button onClick={removeQuantityHandler}>-</button>
+          <Button className="cartButton" onClick={removeQuantityHandler}>
+            -
+          </Button>
           <span>{quantity}</span>
-          <button onClick={addQuantityHandler}>+</button>
+          <Button className="cartButton" onClick={addQuantityHandler}>
+            +
+          </Button>
         </div>
       </li>
     </>

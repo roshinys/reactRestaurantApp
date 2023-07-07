@@ -13,12 +13,3 @@
   height: 25px;
   padding: 5px;
 }
-
-.cartactions button {
-  background-color: #03c988;
-  color: white;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}

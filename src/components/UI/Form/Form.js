@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import styles from "./Form.module.css";
 import CartContext from "../../../store/cart-context";
+import Button from "../Button/Button";
 
 function Form(props) {
   const cartCtx = useContext(CartContext);
@@ -31,9 +32,7 @@ function Form(props) {
             required
           />
         </div>
-        <button type="submit" className={styles.formButton}>
-          +Add
-        </button>
+        <Button type="submit">+Add</Button>
       </form>
     </div>
   );

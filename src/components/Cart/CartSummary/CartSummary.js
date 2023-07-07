@@ -9,11 +9,18 @@ function CartSummary() {
     ctx.closeCart();
   };
 
+  const totalPrice = ctx.cartItems
+    .reduce((accumulator, item) => {
+      const itemPrice = parseInt(item.quantity) * parseFloat(item.price);
+      return accumulator + itemPrice;
+    }, 0)
+    .toFixed(2);
+
   return (
     <>
       <div className={styles.total}>
         <span>Total Amount</span>
-        <span>35.62</span>
+        <span>{totalPrice}</span>
       </div>
       <div className={styles.actions}>
         <button className={styles.closeCart} onClick={cartCloseHandler}>
