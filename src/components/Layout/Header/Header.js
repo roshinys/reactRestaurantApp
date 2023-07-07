@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Header.module.css";
-import Button from "../../UI/Button";
-import CartIcon from "../../UI/CartIcon";
+import Button from "../../UI/Button/Button";
+import CartIcon from "../../UI/CartIcon/CartIcon";
 import mealsImage from "../../../images/raspberries.jpg";
 import Summary from "../Summary/Summary";
 

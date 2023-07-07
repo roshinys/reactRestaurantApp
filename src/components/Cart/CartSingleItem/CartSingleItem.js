@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import styles from "./CartSingleItem.module.css";
-import CartContext from "../../store/cart-context";
+import CartContext from "../../../store/cart-context";
 
 function CartSingleItem(props) {
   const [quantity, setQuantity] = useState(props.cart.quantity);

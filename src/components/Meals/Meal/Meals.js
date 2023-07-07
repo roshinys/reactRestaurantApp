@@ -1,5 +1,5 @@
 import React from "react";
-import MealItem from "./MealItem";
+import MealItem from "../MealItem/MealItem";
 import styles from "./Meals.module.css";
 
 const DUMMY_MEALS = [

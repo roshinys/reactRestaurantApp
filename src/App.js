@@ -1,6 +1,6 @@
 import Header from "./components/Layout/Header/Header.js";
-import Meals from "./components/Meals/Meals.js";
-import Cart from "./components/Cart/Cart.js";
+import Meals from "./components/Meals/Meal/Meals.js";
+import Cart from "./components/Cart/Cart/Cart.js";
 import { useContext } from "react";
 import CartContext from "./store/cart-context.js";
 
